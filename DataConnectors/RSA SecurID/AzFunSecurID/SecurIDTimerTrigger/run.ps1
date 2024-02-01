@@ -270,7 +270,7 @@ function Get-RSASecurIDEvent {
     $EventStartTime = Get-StartTime -CheckpointFile $CheckPointFile
     $character = "\+"
     if ($EventStartTime -match $character) {
-        $EventStartTime = $EventStartTime.replace('+', '%2B')
+        $EventStartTime = $EventStartTime.replace('+', '%2D')
     }    
     # Format Endpoint Admin/User
     If ($RSA_Log_Type.ToLower() -eq "admin") {
